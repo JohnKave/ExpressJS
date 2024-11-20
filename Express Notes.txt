@@ -1,0 +1,95 @@
+Express Notes
+-------------
+- (a framework)"Express" js on "node" js for a restful API
+- need node js and node package manager
+- cmd >npm init (-y for default) where "npm init -y"
+- "npm i express" to install express module
+- node index.js to run at ide's terminal or command prompt
+- "npm i -g nodemon" < install nodemon for realtime tracking in development (node monitor)
+//add "sudo" on mac if permission property is not configured yet where ">sudo npm i -g nodemon"
+-g for global
+
+x-------------------------------------------------------------x
+
+About Restful API for a beginner
+--------------------------------
+
+- API ( Application Programming Interface ) - connection between computers or between computer programs
+
+- "REST" => most common communication standard between computers / A Common API standards
+
+- mobile/web application ==use==> REST ==to==> talk to the server ( **A set of rules for building web API** )
+
+- REST ==> REpresentational State Transfer 
+
+- Restful API ==> API that follows REST standard/ an architectural style
+
+REST principles
+---------------
+- Stateless, where each request is independent and must contain all the information needed for processing
+
+- Resource-Based identification /users, /products
+
+- use standard http methods
+
+- resource representation in JSON or XML format
+
+x--------------------------------------------------x
+
+REST basics
+-----------
+- Uniform Resource Identifiers ( URI ) 
+
+- URIs <== different types of resources "users"/"products" **(nouns)**
+
+- Requests or HTTP verbs ==preceeds/use-to-get==> URIs (resources)
+
+- HTTP verbs ==> POST/GET/PUT/DELETE (CRUD) // Requests
+
+- Request's body ==could have==> custom payload of data (encoded in JSON) ("optional HTTP requests")
+
+-* REST implementation should be stateless ( two parties don't need to store any information about each other "client" and "server" )
+
+-* Every req/res independent from all others
+
+- Versioning is important >>allows>> implementation to backward compatibility
+(eg. prefix the version before the resource on the URI => "/v1/products" "/v2/products" )
+
+x-----------------------------------------------------x
+
+Process of RESTful API
+----------------------
+
+1.client req
+2.server receives/process req
+3.server response httpstatus + req/obj (GET/POST)
+
+- httpstatus 
+[ 200+(good/success), 400+(something went wrong with req/client level), 500+(server level error) ]
+
+About APIs // Endpoints
+-----------------------
+
+Public APIs
+-http end points like "https://market/resources/clothes/1"
+-URL ( Uniform Resource Locator )
+
+APIs with authentications
+- ( curl -H "Authorization: token OAUTH-TOKEN" https://api.github.com )
+- ( curl https://api.github.com/?access_token = OAUTH-TOKEN )
+- ( curl 'https://api.github.com/users/whatever?client_id=xxxx&client_secret=yyyy' )
+
+PUT and PATCH diff
+------------------
+PUT - Update the entire existing source
+PATCH - update part of an existing source
+
+
+xxx
+TypeORM => Can Connect with Most of the databases
+Mongoose => Only for Mongodb
+xxx
+
+
+
+
