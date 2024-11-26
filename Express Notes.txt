@@ -93,6 +93,7 @@ xxx
 Cookies
 -------
 /*note: the explanation will be basic-easy-to-understand.
+/*note: some of the notes here might not be entirely correct (arguable) but basic and easy to memorize
 ...
 
 /what are cookies?:
@@ -117,5 +118,57 @@ Sample Cookies
 --------------
 From SERVER to BROWSER: " Set-Cookie: session_id=12345; HttpOnly; Secure; SameSite=Strict
 From BROWSER to SERVER: " Cookie: session_id=12345 "
+
+
+Properties of a Cookie
+----------------------
+- Name=Value or Key=Value pairs like sessionID=abc123 => actual data stored in the cookie
+- Domain: specifies the domain for which the cookie is valid
+- Path: limits the cookie to a specific path within the domain
+- Expires/Max-age: duration of the cookie's validity
+- Secure: ensures the cookie is only sent over HTTPS
+- HttpOnly: prevents client-side js from accessing the cookie (prevents XSS attacks)
+- SameSite: controls whether the cookie is sent with cross-site req (helps prevent CSRF attacks)
+- some other keywords
+  Strict: Cookies are sent only for same-site req
+  Lax: Cookies are sent with top-evel navigation and some GET req
+  None: Cookies are sent in all contexts (must also have "Secure")
+  XSS: Cross-Site Scripting 
+  CSRF: Cross-Site Request Forgery 
+
+Cookies Use-cases
+-----------------
+- Authenticaiton: Session cookies can keep users looged in while they navigate a website
+- Personalization: Persistent cookies can store user preferences like dark mode
+- Shopping Carts: Cookies can track items added to a cart without requiring a login.
+- Analytics: Websites use cookies to understand user behavior like google analytics
+- Targeted Advertising: Third-party cookies track user behavior across multiple sites to serve relevant ads.
+Note*- Third-party cookies can track users across multiple sites which raise privacy concerns/ user consent about cookies <- Laws enforces website
+
+
+JWT (JSON Web Token)
+--------------------
+- an open standard (RFC 7519)
+- for securely transmitting information between parties as JSON obj
+- information can be verified and trusted -> digitally signed
+- commonly used for authentication and authorization in modern web applications
+
+JWT - ( header.payload.signature ) < three parts
+Each part is Base64Url-encoded:
+- Header: Contains information about the token (e.g., algorithm and type).
+- Payload: Contains the claims (e.g., user data and token expiration).
+- Signature: Ensures the token hasn't been tampered with.
+
+
+How JWT Works
+-------------
+//authentication
+- CLIENT -requestLogin-> w/credentials -to-> SERVER
+- SERVER -verifies-> user's credentials -ifvalid-> generates JWT -sendsto-> CLIENT as response
+...
+- CLIENT stores JWT in localstorage, session storage or cookies after Authentication
+- JWT -includes-> Header.Payload.Signature
+- CLIENT then uses JWT to request access to protected resource where server decodes and check if the signature sent by client matches the one **recreated** on server
+
 
 
