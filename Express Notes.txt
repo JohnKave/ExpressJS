@@ -90,6 +90,32 @@ TypeORM => Can Connect with Most of the databases
 Mongoose => Only for Mongodb
 xxx
 
+Cookies
+-------
+/*note: the explanation will be basic-easy-to-understand.
+...
 
+/what are cookies?:
+- text files with small pieces of data (eg. username, session ID)
+- sent from the server to the user's browser
+/after-process: browser stores the cookie and sends it back to the server when user request to the same domain as subsequent request
+/purpose: to store user-specific information (eg. login sessions, preferences or items in a shopping cart.
+
+/type of cookies:
+- session cookies: temporary info storage/ removed after a session (browser closed)
+- persistent cookies: long term info storage/ removed after set amount of time (eg. remembering login credentials )
+- first-party cookies: set by visited website directly (user pref/sessions/etc...)
+- third-party cookies: set by other parties (eg. ad/ networks/ usedFor: cross-site tracking/targeted advertising)
+
+/How Cookies work
+- USER ( visits a website ) --> SERVER --send--> "Set-Cookie" header in HTTP response
+- BROWSER --saves--> cookie
+- USER ( visits same website ): BROWSER --sends--> saved cookie --to--> SERVER /with "Cookie" header
+
+
+Sample Cookies
+--------------
+From SERVER to BROWSER: " Set-Cookie: session_id=12345; HttpOnly; Secure; SameSite=Strict
+From BROWSER to SERVER: " Cookie: session_id=12345 "
 
 
