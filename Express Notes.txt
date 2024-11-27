@@ -171,4 +171,13 @@ How JWT Works
 - CLIENT then uses JWT to request access to protected resource where server decodes and check if the signature sent by client matches the one **recreated** on server
 
 
+bcrypt
+------
+- A module for node.js just like express
+- password hashing ( not encryption )
+- helps store passwords securely by converting them into an irreversible hash
+- securely hash and validate passwords ( during user authentication )
+- sample term: store password in the most inreadible way possible ( secure password storage )
+
+
 
