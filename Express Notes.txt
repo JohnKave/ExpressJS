@@ -164,7 +164,7 @@ How JWT Works
 -------------
 //authentication
 - CLIENT -requestLogin-> w/credentials -to-> SERVER
-- SERVER -verifies-> user's credentials -ifvalid-> generates JWT -sendsto-> CLIENT as response
+- SERVER -verifies-> user's credentials -ifvalid-> generates JWT -sendTo-> CLIENT as response
 ...
 - CLIENT stores JWT in localstorage, session storage or cookies after Authentication
 - JWT -includes-> Header.Payload.Signature
