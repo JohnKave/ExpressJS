@@ -192,6 +192,7 @@ Nodemailer
 6. add custom headers or set email priorities
 /*note: SMTP-Simple Mail Transfer Protocol, TLS-Transport Layer Security, SSL-Secure Sockets Layer, TLS > SSL
 
+Rate Limits: For high-volume email sending, consider third-party services like SendGrid, Mailgun, or Postmark.
 
 
 
