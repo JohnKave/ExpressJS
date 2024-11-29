@@ -180,4 +180,18 @@ bcrypt
 - sample term: store password in the most inreadible way possible ( secure password storage )
 
 
+Nodemailer
+----------
+- another node.js module that simplifies sending mails from server-side applications
+- features: 
+1. support popular email services like gmail, outlook, yahoo
+2. allows custom SMTP configurations for private email servers
+3. send emails with rich HTML content for better formatting
+4. can attach files, images or documents to emails
+5. supports secure connections via TLS/SSL
+6. add custom headers or set email priorities
+/*note: SMTP-Simple Mail Transfer Protocol, TLS-Transport Layer Security, SSL-Secure Sockets Layer, TLS > SSL
+
+
+
 
