@@ -194,5 +194,6 @@ Nodemailer
 
 Rate Limits: For high-volume email sending, consider third-party services like SendGrid, Mailgun, or Postmark.
 
+Use Cases: Sending transactional emails (e.g., password reset, order confirmations), Bulk email campaigns, Automated notifications and alerts.
 
 
